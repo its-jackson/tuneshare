@@ -1,4 +1,5 @@
-<?php require_once('header.php'); ?>
+<?php require_once('header.php'); session_start();
+  ?>
   <body class="text-center">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
   <header class="masthead mb-auto">
@@ -8,6 +9,7 @@
         <a class="nav-link" href="index.php">Home</a>
         <a class="nav-link" href="add.php">Share Your Tune</a>
         <a class="nav-link" href="view.php">View Playlists</a>
+        <a class="nav-link" href="forgetme.php">Forget Me</a>
       </nav>
     </div>
   </header>

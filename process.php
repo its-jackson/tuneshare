@@ -1,4 +1,5 @@
-<?php require_once('header.php'); ?>
+<?php require_once('header.php'); 
+      session_start();?>
 <body class="add">
 <div class="container inner saved">
 <header class="masthead mb-auto">
@@ -8,6 +9,7 @@
         <a class="nav-link" href="index.php">Home</a>
         <a class="nav-link" href="add.php">Share Your Tune</a>
         <a class="nav-link" href="view.php">View Playlists</a>
+        <a class="nav-link" href="forgetme.php">Forget Me</a>
       </nav>
     </div>
   </header>
@@ -123,6 +125,14 @@
 
             // show message
             echo "<p> Song added! Thanks for sharing! </p>";
+
+            // Set session variables
+            $_SESSION["user_name"] = $first_name;
+            $_SESSION["last_name"] = $last_name;
+
+            echo $_SESSION["first_name"];
+            echo $_SESSION["last_name"];
+            
 
             // disconnecting
             $statement->closeCursor();
